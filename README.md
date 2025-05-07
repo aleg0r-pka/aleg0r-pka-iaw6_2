@@ -105,7 +105,14 @@ Repetiríamos este mismo proceso para todas las carpetas que nos interese, como 
 
 
 ### Acción 5: Desactivar el acceso a xmlrpc.php
-En relación a lo anterior, otra medida similar podría ser el bloqueo del acceso al archivo xmlrpc.php, un blanco común para ataques por fuerza bruta y DDoS. Para ello, deberemos modificar de nuevo el archivo **.htaccess** pero esta vez refiriéndonos al archivo raíz, y añadiremos antes *Order Deny,Allow*. En esta ocasión, por cambiar respecto al caso anterior, lo haremos mediante comando sudo nano
+En relación a lo anterior, otra medida similar podría ser el bloqueo del acceso al archivo xmlrpc.php, un blanco común para ataques por fuerza bruta y DDoS. Para ello, deberemos modificar de nuevo el archivo **.htaccess** pero esta vez refiriéndonos al archivo raíz, y además de *Deny from all*, añadiremos antes *Order Deny,Allow*. En esta ocasión, por cambiar respecto al caso anterior, lo haremos mediante comando sudo nano
+El código a incorporar en nuestro documento sería:
+```
+<Files xmlrpc.php>
+Order Deny,Allow
+Deny from all
+</Files>
+```
 
 [](images/accion5_1.png)
 
