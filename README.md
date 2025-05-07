@@ -113,9 +113,8 @@ Order Deny,Allow
 Deny from all
 </Files>
 ```
+[](images/accion5_1_.png)
 
-[](images/accion5_1.png)
-
-[](images/accion5_2.png)
+[](images/accion5_2_.png)
 
 Como puede apreciarse, la información que podemos apreciar en este archivo **.htaccess** es considerablemente diferente a la acción anterior, puesto que como se exponía, en este caso trabajaremos en el documento del archivo raíz, afectando a todos los demás. 
