@@ -103,15 +103,10 @@ Si queremos comprobar que efectivamente el documento **.htaccess** está debidam
 
 Repetiríamos este mismo proceso para todas las carpetas que nos interese, como se expuso anteriormente
 
-
-[](images/accion5.png)
-
-[](images/accion5b.png)
-
-
 ### Acción 5: Desactivar el acceso a xmlrpc.php
 En relación a lo anterior, otra medida similar podría ser el bloqueo del acceso al archivo xmlrpc.php, un blanco común para ataques por fuerza bruta y DDoS. Para ello, deberemos modificar de nuevo el archivo **.htaccess** pero esta vez refiriéndonos al archivo raíz, y además de *Deny from all*, añadiremos antes *Order Deny,Allow*. En esta ocasión, por cambiar respecto al caso anterior, lo haremos mediante comando sudo nano
 
+[](images/accion5.png)
 
 El código a incorporar en nuestro documento sería:
 
@@ -121,6 +116,7 @@ Order Deny,Allow
 Deny from all
 </Files>
 ```
+[](images/accion5b.png)
 
 
 Como puede apreciarse, la información que podemos apreciar en este archivo **.htaccess** es considerablemente diferente a la acción anterior, puesto que como se exponía, en este caso trabajaremos en el documento del archivo raíz, afectando a todos los demás. 
