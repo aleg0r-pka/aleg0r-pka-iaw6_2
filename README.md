@@ -85,7 +85,7 @@ deny from all
 
 A continuación podemos ver el ejemplo de una de estas acciones, en este caso con el subdirectorio plugins:
 
-[](images/accion4_1.png)
+![](images/accion4_1.png)
 
 El comando 
 
@@ -99,14 +99,14 @@ sudo tee ... > /dev/null guarda automáticamente el archivo con permisos asignad
 Como se puede apreciar en la captura de pantalla, hemos aplicado ls -la para comprobar la creación del archivo, que efectivamente nos aparece entre los contenidos de la carpeta plugins
 Si queremos comprobar que efectivamente el documento **.htaccess** está debidamente configurado, simplemente lo abriremos con el comando sudo nano + la ruta del archivo
 
-[](images/accion4_2.png)
+![](images/accion4_2.png)
 
 Repetiríamos este mismo proceso para todas las carpetas que nos interese, como se expuso anteriormente
 
 ### Acción 5: Desactivar el acceso a xmlrpc.php
 En relación a lo anterior, otra medida similar podría ser el bloqueo del acceso al archivo xmlrpc.php, un blanco común para ataques por fuerza bruta y DDoS. Para ello, deberemos modificar de nuevo el archivo **.htaccess** pero esta vez refiriéndonos al archivo raíz, y además de *Deny from all*, añadiremos antes *Order Deny,Allow*. En esta ocasión, por cambiar respecto al caso anterior, lo haremos mediante comando sudo nano
 
-[](images/accion5.png)
+![](images/accion5.png)
 
 El código a incorporar en nuestro documento sería:
 
@@ -116,7 +116,7 @@ Order Deny,Allow
 Deny from all
 </Files>
 ```
-[](images/accion5b.png)
+![](images/accion5b.png)
 
 
 Como puede apreciarse, la información que podemos apreciar en este archivo **.htaccess** es considerablemente diferente a la acción anterior, puesto que como se exponía, en este caso trabajaremos en el documento del archivo raíz, afectando a todos los demás. 
